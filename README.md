@@ -1,7 +1,7 @@
 # Bunch of League of Legends scripts
 
 Dependencies: Visual Studio 2013
-You will have to update the coordinates of the elements used in the source code.
+You will have to update the coordinates of the elements used in the source code.  
 TODO: make this scalable by using files that match a certain user
 
 To log in: 
