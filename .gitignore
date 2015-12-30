@@ -45,3 +45,21 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+
+# ==============================
+# own stuff
+# ==============================
+
+# Local binaries
+/Debug/
+/Release/
+/generate_password_hash/Debug/
+/generate_password_hash/Release/
+/Lol_login_v1/Debug/
+/Lol_login_v1/Release/
+
+# Password files
+/generate_password_hash/pass.txt
+/Lol_login_v1/pass.txt
+
