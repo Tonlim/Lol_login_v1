@@ -17,6 +17,7 @@ const int tick = 75;	//sleep time for before we issue the next command
 const string namesFile = "invite_normal_draft_names.txt";
 const string variablesFile = "systemvariables_invite_normal_draft.txt";
 
+
 //system dependent variables
 int xOpenInviteScreenStart;
 int yOpenInviteScreenStart;
