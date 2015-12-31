@@ -7,7 +7,7 @@ Dependencies: Visual Studio 2013 (aka I know it will work on that)
 - put the .exe's (found in /Release/) and "systemvariables_login.txt" together in one folder
 - run generate_password_hash.exe to make a password file ("pass.txt")
 - run Lol_login_v1.exe
-- 
+
 ##Invite (normal draft)
 - build "invite_normal_draft"
 - put the .exe (found in /Release/), "systemvariables_invite_normal_draft.txt" and "invite_normal_draft_names" together in one folder
