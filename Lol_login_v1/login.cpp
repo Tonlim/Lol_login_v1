@@ -3,6 +3,7 @@
  */
 
 #include <iostream>
+#include <sstream>
 #include <cstdlib>
 #include <windows.h>
 #include <winuser.h>
@@ -11,10 +12,21 @@
 #include <fstream>
 #include <stdlib.h>
 
-using std::string;
-using std::cout;
+using namespace std;
 
 const char magic = 0x11111111;			//used to decode password
+const string passwordFile = "pass.txt";
+const string variablesFile = "systemvariables.txt";
+
+//system dependent variables
+int delayPatcher;
+int delayLogin;
+int xPassword;
+int yPassword;
+int xLogin;
+int yLogin;
+int xLaunch;
+int yLaunch;
 
 void LeftClick()
 {
@@ -71,6 +83,36 @@ void TypeShiftKey(int vk){
 	SendInput(1, &Input, sizeof(Input));
 }
 
+void ReadSystemVariables(){
+	ifstream file;
+	file.open(variablesFile);
+	string temp;
+
+	getline(file, temp); //comment
+	getline(file, temp);
+	istringstream(temp) >> delayPatcher;
+	getline(file, temp); //comment
+	getline(file, temp);
+	istringstream(temp) >> delayLogin;
+	getline(file, temp); //comment
+	getline(file, temp);
+	istringstream(temp) >> xPassword;
+	getline(file, temp);
+	istringstream(temp) >> yPassword;
+	getline(file, temp); //comment
+	getline(file, temp);
+	istringstream(temp) >> xLogin;
+	getline(file, temp);
+	istringstream(temp) >> yLogin;
+	getline(file, temp); //comment
+	getline(file, temp);
+	istringstream(temp) >> xLaunch;
+	getline(file, temp);
+	istringstream(temp) >> yLaunch;
+
+	
+}
+
 void StartUpLoL(){
 	system("C:\\\"Riot Games\"\\\"League of Legends\"\\lol.launcher.exe");
 	//Lol patcher
@@ -87,14 +129,16 @@ void Login(){
 	SetForegroundWindow(window);
 	SetActiveWindow(window);
 	SetFocus(window);
-	SetCursorPos(rect.right - 750, rect.top + 415);	//415:pass  355:name
+	//wait for client to be loaded
+	Sleep(delayLogin);
+	SetCursorPos(rect.right - xPassword, rect.top + yPassword);	//415:pass  355:name
 	Sleep(50);
 	LeftClick();
 	Sleep(50);
 	
 	//read coded pass
-	std::ifstream file;
-	file.open("pass.txt");
+	ifstream file;
+	file.open(passwordFile);
 	string codedPass;
 	string pass = "";
 	file >> codedPass;
@@ -114,9 +158,9 @@ void Login(){
 		}
 	}
 	
-	SetCursorPos(rect.right - 750, rect.top + 445);	//goto login button
+	SetCursorPos(rect.right - xLogin, rect.top + yLogin);	//goto login button
 	Sleep(50);
-	LeftClick();
+	LeftClick();		//login click
 
 }
 
@@ -126,20 +170,22 @@ void LaunchLoL(){
 		Sleep(2500);
 		window = FindWindow(NULL, "LoL Patcher");
 	}
+	//wait untill the patcher is ready
+	Sleep(delayPatcher);
+
 	RECT rect = { 0 };
 	GetClientRect(window, &rect);
 	SetForegroundWindow(window);
 	SetActiveWindow(window);
 	SetFocus(window);
-	//wait untill the patcher is ready
-	Sleep(1500);		
-	SetCursorPos(rect.right + 700, rect.top + 100);
+	SetCursorPos(rect.left + xLaunch, rect.top + yLaunch);		//rect.right can contain 2 values (fault after +-5 tries), rect.left seems safe (10 tries)
 	Sleep(50);	
 	LeftClick();
 	Login();
 }
 
 int main(){
+	ReadSystemVariables();
 	StartUpLoL();
 	LaunchLoL();
 	return 0;

@@ -1,5 +1,5 @@
 /*
- *
+ *	
  */
 
 #include <iostream>
@@ -12,6 +12,7 @@ using std::cout;
 using std::cin;
 
 const char magic = 0x11111111;
+const string passwordFile = "pass.txt";
 
 int main(){
 	bool correctPass = false;
@@ -52,7 +53,7 @@ int main(){
 
 	//write pass
 	std::ofstream file;
-	file.open("pass.txt");
+	file.open(passwordFile);
 	file << codedPass;
 	file.close();
 
