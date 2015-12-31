@@ -109,8 +109,6 @@ void ReadSystemVariables(){
 	istringstream(temp) >> xLaunch;
 	getline(file, temp);
 	istringstream(temp) >> yLaunch;
-
-	
 }
 
 void StartUpLoL(){

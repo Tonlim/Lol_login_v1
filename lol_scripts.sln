@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lol_login_v1", "Lol_login_v
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "generate_password_hash", "generate_password_hash\generate_password_hash.vcxproj", "{512ED627-28A5-4F19-9ECD-0F652F95DA9D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "invite_normal_draft", "invite_scrubs\invite_scrubs.vcxproj", "{62F6D958-DF7A-4DEC-BDC5-4EC9794DFC0D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -21,6 +23,10 @@ Global
 		{512ED627-28A5-4F19-9ECD-0F652F95DA9D}.Debug|Win32.Build.0 = Debug|Win32
 		{512ED627-28A5-4F19-9ECD-0F652F95DA9D}.Release|Win32.ActiveCfg = Release|Win32
 		{512ED627-28A5-4F19-9ECD-0F652F95DA9D}.Release|Win32.Build.0 = Release|Win32
+		{62F6D958-DF7A-4DEC-BDC5-4EC9794DFC0D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{62F6D958-DF7A-4DEC-BDC5-4EC9794DFC0D}.Debug|Win32.Build.0 = Debug|Win32
+		{62F6D958-DF7A-4DEC-BDC5-4EC9794DFC0D}.Release|Win32.ActiveCfg = Release|Win32
+		{62F6D958-DF7A-4DEC-BDC5-4EC9794DFC0D}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

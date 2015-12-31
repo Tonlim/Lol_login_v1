@@ -58,12 +58,13 @@ Temporary Items
 /generate_password_hash/Release/
 /Lol_login_v1/Debug/
 /Lol_login_v1/Release/
-
-# Examples for local systemvariables files
-/resource_examples/
+/invite_scrubs/Debug/
+/invite_scrubs/Release/
 
 # Password and SystemVariables files
 /generate_password_hash/pass.txt
 /Lol_login_v1/pass.txt
 /Lol_login_v1/systemvariables_login.txt
+/invite_scrubs/systemvariables_invite_normal_draft.txt
+/invite_scrubs/invite_normal_draft_names.txt
 
