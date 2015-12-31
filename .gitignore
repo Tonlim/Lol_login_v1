@@ -58,6 +58,8 @@ Temporary Items
 /generate_password_hash/Release/
 /Lol_login_v1/Debug/
 /Lol_login_v1/Release/
+
+# Examples for local systemvariables files
 /resource_examples/
 
 # Password and SystemVariables files
