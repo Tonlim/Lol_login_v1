@@ -1,0 +1,13 @@
+# delay patcher (ms)
+2500
+# delay login client(ms)
+1000
+# coordinates password field
+750
+415
+# coordinates login button
+750
+445
+# coordinates launch button
+750
+100
