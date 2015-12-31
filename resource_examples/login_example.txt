@@ -13,7 +13,7 @@
 100
 # anything on this line and the following ones is ignored
 
-_______________ SAVE AS "systemvariables.txt" TO USE FILE WITH "Lol_login_v1.exe" ______________________________
+_______________ SAVE AS "systemvariables_login.txt" TO USE FILE WITH "Lol_login_v1.exe" ______________________________
 
 Example file that should work on elite_cart's system (no promises):
 # delay patcher (ms)

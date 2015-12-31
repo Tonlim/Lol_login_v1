@@ -65,5 +65,5 @@ Temporary Items
 # Password and SystemVariables files
 /generate_password_hash/pass.txt
 /Lol_login_v1/pass.txt
-/Lol_login_v1/systemvariables.txt
+/Lol_login_v1/systemvariables_login.txt
 

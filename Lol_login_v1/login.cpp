@@ -16,7 +16,7 @@ using namespace std;
 
 const char magic = 0x11111111;			//used to decode password
 const string passwordFile = "pass.txt";
-const string variablesFile = "systemvariables.txt";
+const string variablesFile = "systemvariables_login.txt";
 
 //system dependent variables
 int delayPatcher;
