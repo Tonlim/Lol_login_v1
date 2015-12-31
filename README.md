@@ -2,7 +2,7 @@
 
 Dependencies: Visual Studio 2013 (aka I know it will work on that)
 
-##Log in: 
+##Log in 
 - build "generate_password_hash" and "Lol_login_v1"
 - put the .exe's (found in /Release/) and "systemvariables_login.txt" together in one folder
 - run generate_password_hash.exe to make a password file ("pass.txt")
