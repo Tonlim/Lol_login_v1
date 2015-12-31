@@ -1,0 +1,24 @@
+# OpenInviteScreen location "Start" button
+400
+150
+# OpenInviteScreen location "Summoners Rift" button
+400
+275
+# OpenInviteScreen location "Draft Pick" button
+200
+350
+# OpenInviteScreen location "Party" button
+200
+800
+# OpenInviteScreen location "Invite" button
+225
+485
+# InviteName location box to type the name
+225
+300
+# InviteName location "Add to list" button
+50
+300
+# InviteNormalSquad location "Invite Players" button
+150
+825
