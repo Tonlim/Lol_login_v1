@@ -68,3 +68,6 @@ Temporary Items
 /invite_scrubs/systemvariables_invite_normal_draft.txt
 /invite_scrubs/invite_normal_draft_names.txt
 
+# Visual Studio files
+lol_scripts.opensdf
+
