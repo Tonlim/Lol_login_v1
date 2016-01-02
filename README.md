@@ -10,7 +10,7 @@ Dependencies: Visual Studio 2013 (aka I know it will work on that)
 
 ##Invite (normal draft)
 - build "invite_normal_draft"
-- put the .exe (found in /Release/), "systemvariables_invite_normal_draft.txt" and "invite_normal_draft_names" together in one folder
+- put the .exe (found in /Release/), "systemvariables_invite_normal_draft.txt" and "invite_normal_draft_names.txt" together in one folder
 - make sure your LoL is open, in the default position and the "Start" button is avialable
 - run invite_normal_draft.exe
 
