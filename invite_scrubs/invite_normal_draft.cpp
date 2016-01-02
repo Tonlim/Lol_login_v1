@@ -34,6 +34,8 @@ int xInviteNameBox;
 int yInviteNameBox;
 int xInviteNameAddList;
 int yInviteNameAddList;
+int xInviteNameOk;
+int yInviteNameOk;
 
 int xInviteNormalSquadInvitePlayers;
 int yInviteNormalSquadInvitePlayers;
@@ -139,6 +141,11 @@ void ReadSystemVariables(){
 	istringstream(temp) >> xInviteNormalSquadInvitePlayers;
 	getline(file, temp);
 	istringstream(temp) >> yInviteNormalSquadInvitePlayers;
+	getline(file, temp); //comment
+	getline(file, temp);
+	istringstream(temp) >> xInviteNameOk;
+	getline(file, temp);
+	istringstream(temp) >> yInviteNameOk;
 }
 
 void OpenInviteScreen(int x, int y){
@@ -166,20 +173,29 @@ void InviteName(int x, int y, string name){
 	LeftClick();
 	int i = 0;
 	for (char& c : name){
-		if (islower(c)){
-			TypeKey(toupper(c));
-		}
+		if (c == 'è'){			//because someone had to be a special butterfly
+			TypeKey('7');
+		} 
 		else {
-			TypeShiftKey(c);
+			if (islower(c)){
+				TypeKey(toupper(c));
+			}
+			else {
+				TypeShiftKey(c);
+			}
 		}
 		i++;
 	}
 	SetCursorPos(x - xInviteNameAddList, y + yInviteNameAddList);				//50,300
 	Sleep(tick);
 	LeftClick();
+	SetCursorPos(x - xInviteNameOk, y + yInviteNameOk);							//450,550
+	Sleep(tick);
+	LeftClick();
 	SetCursorPos(x - xInviteNameBox, y + yInviteNameBox);				//125,300 //same as above!
 	Sleep(tick);
 	LeftClick();
+	
 	for (int j = 0; j < i; j++){
 		TypeKey((char)8); //unicode backspace
 	}
