@@ -19,5 +19,5 @@ Dependencies: Visual Studio 2013 (aka I know it will work on that)
 All .txt files mentioned here are different for each user. They largely depend on your screen resolution and how Windows opens LoL on your system. I've provided a few examples in resource_examples that work on my machine (---tonlim) and on the machine of a friend (---elite_cart).  
 Feel free to try those before making your own.
 
-###Note on "Build
+###Note on "Build"
 This folder contains compiled versions of the scripts in this repository. If you don't have access to VS2013 you can try these. Of course you won't be able to debug/finetune the needed .txt files.
